@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+</head>
+<body>
+    <h1>Delegate items</h1>
+
+    <ul id="list">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Assumenda, odio ad!</li>
+        <li class="item">Provident, mollitia ratione.</li>
+        <li class="item">Aperiam, commodi accusamus.</li>
+        <li class="item">Corporis, laudantium provident!</li>
+        <li class="item">Recusandae, quisquam neque.</li>
+    </ul>
+    <button id="btn-add">Add list</button>
+
+    <script>
+        // const items = document.getElementsByClassName('item');
+        // for(const item of items){
+        //     item.addEventListener('click', function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+        
+        
+        document.getElementById('list').addEventListener('click', function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+
+        document.getElementById('btn-add').addEventListener('click', function(){
+            const listContainer = document.getElementById('list');
+            const li = document.createElement('li');
+            li.innerText = "brand new button";
+            li.classList.add('item');
+            listContainer.appendChild(li);
+            console.log(li);
+        })
+
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>another comment box</title>
+</head>
+<body>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestiae blanditiis, impedit totam enim fuga, magni tempore, cum perferendis hic omnis. Distinctio fugiat deserunt temporibus dolor quisquam similique, porro commodi et autem quo, totam optio quas repellendus provident ipsa perspiciatis laborum? Quo, dolorum non rerum unde velit voluptates culpa reiciendis.</p>
+        <p>Omnis, nemo adipisci delectus repellat voluptas deserunt minima vitae, est, voluptate perspiciatis obcaecati? Officia eligendi nisi, error consequuntur nulla maiores ab explicabo culpa tempore rerum totam, voluptatibus recusandae unde blanditiis, dolores quos veritatis harum dolorem illo tenetur? Nisi, non quas? Accusamus error eaque sed, aspernatur officia sint pariatur aperiam est.</p>
+        <p>Fugiat itaque ipsam officia ratione cumque minus voluptatibus, eos quaerat obcaecati quisquam eveniet maxime? Blanditiis neque fuga consectetur iure delectus fugiat unde quisquam? Minus pariatur, error reprehenderit ex incidunt cumque ducimus quas labore recusandae alias consequuntur voluptatem suscipit hic vitae laudantium placeat quibusdam eius. Illo ratione exercitationem eum. Iure, iste.</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+        <br><br>
+        <button id="btn-post">Post</button>
+    </div>
+
+    <script>
+        document.getElementById('btn-post').addEventListener('click', function(){
+            const textArea = document.getElementById('new-comment');
+            const comment = textArea.value;
+            const p = document.createElement('p');
+            p.innerText = comment;
+            document.getElementById('comment-container').appendChild(p);
+            textArea.value = '';
+        })
+    </script>
+</body>
+</html>

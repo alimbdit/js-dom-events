@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Event</title>
+</head>
+<body>
+    <h1>Event listener more</h1>
+    <button id="btn">More</button>
+    <input type="text" id="hand">
+
+    <script>
+        // document.getElementById('hand').addEventListener('focus', function(){
+        //     console.log('this is focus');
+        // })
+
+        // document.getElementById('hand').addEventListener('blur', function(){
+        //     console.log('this is blur');
+        // })
+        // document.getElementById('hand').addEventListener('keydown', function(event){
+        //     console.log(event.target.value);
+        // })
+        // document.getElementById('hand').addEventListener('keypress', function(event){
+        //     console.log(event.target.value);
+        // })
+        
+        document.getElementById('hand').addEventListener('keyup', function(event){
+            console.log(event.target.value);
+        })
+        
+
+        document.getElementById('btn').addEventListener('mousemove', function(){
+            console.log('actions');
+        })
+    </script>
+</body>
+</html>

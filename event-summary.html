@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM summary</title>
+</head>
+<body>
+    <h3>This is the text</h3>
+    <h4 id="default-text">default text</h4>
+
+    <p id="text">this is default p text</p>
+    <input id="input-text" type="text">
+    <button id="add-to-change">add to change</button>
+    <br>
+    <br>
+
+    <button id="set-elemnt" onclick="setElement()">Set button element</button>
+    <button id="edit-addEventListener">add button addEventListener</button>
+
+    <script>
+        function setElement(){
+            const defaultText = document.getElementById('default-text');
+            defaultText.innerText = 'this is the onclick without addListener.'
+        }
+
+        document.getElementById('edit-addEventListener').addEventListener('click', function(){
+            document.getElementById('default-text').innerText="this is addEventListener."
+        })
+
+        document.getElementById('add-to-change').addEventListener('click', function(){
+            const inputField = document.getElementById('input-text');
+            const inputText = inputField.value;
+            document.getElementById('text').innerText = inputText;
+            inputField.value = '';
+            console.log(inputText);
+        })
+
+    </script>
+</body>
+</html>
